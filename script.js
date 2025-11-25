@@ -116,7 +116,7 @@ let salary = 0;
             document.getElementById('expenseAmount').value = '';
             document.getElementById('otherCategoryGroup').style.display = 'none';
             
-            showAlert('Expense added successfully! ✅', 'success');
+            showAlert('Expense added successfully! ', 'success');
         }
 
         function deleteExpense(id) {
