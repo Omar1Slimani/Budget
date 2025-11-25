@@ -1,0 +1,332 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #000000 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(30, 60, 114, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a9eff;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .salary-section {
+            background: rgba(30, 60, 114, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(74, 158, 255, 0.3);
+        }
+
+        .salary-section h2 {
+            color: #4a9eff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #a8d0ff;
+            font-size: 14px;
+        }
+
+        input[type="number"],
+        input[type="date"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #4a9eff;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        select option {
+            background: #1e3c72;
+            color: #fff;
+            padding: 10px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #6bb6ff;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        input::placeholder {
+            color: #6b8ab5;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4a9eff 0%, #2a5298 100%);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(74, 158, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #000000 0%, #1e3c72 100%);
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(30, 60, 114, 0.4);
+        }
+
+        .btn-delete {
+            background: linear-gradient(135deg, #ff4757 0%, #c23645 100%);
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 14px;
+            margin-top: 0;
+            width: auto;
+        }
+
+        .btn-delete:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: rgba(30, 60, 114, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(74, 158, 255, 0.3);
+        }
+
+        .stat-card h3 {
+            color: #a8d0ff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a9eff;
+        }
+
+        .stat-value.negative {
+            color: #ff6b6b;
+        }
+
+        .stat-value.positive {
+            color: #51cf66;
+        }
+
+        .expenses-list {
+            background: rgba(30, 60, 114, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid rgba(74, 158, 255, 0.3);
+        }
+
+        .expenses-list h2 {
+            color: #4a9eff;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .expense-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .expense-item:hover {
+            transform: translateX(-5px);
+            border-color: rgba(74, 158, 255, 0.4);
+        }
+
+        .expense-info {
+            flex: 1;
+        }
+
+        .expense-date {
+            color: #a8d0ff;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .expense-desc {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .expense-category {
+            color: #4a9eff;
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .expense-amount {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+
+        .no-expenses {
+            text-align: center;
+            color: #a8d0ff;
+            padding: 30px;
+        }
+
+        .alert {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(74, 158, 255, 0.95);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            animation: slideDown 0.3s ease;
+        }
+
+        .alert.error {
+            background: rgba(255, 71, 87, 0.95);
+        }
+
+        .alert.success {
+            background: rgba(81, 207, 102, 0.95);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateX(-50%) translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            .expense-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .expense-amount {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4a9eff;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6bb6ff;
+        }
+        
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        
+        /* input[type=number] {
+            -moz-appearance: textfield;
+        } */
