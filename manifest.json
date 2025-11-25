@@ -1,6 +1,6 @@
 {
   "name": "Budget",
-  "short_name": "App",
+  "short_name": "Budget",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
